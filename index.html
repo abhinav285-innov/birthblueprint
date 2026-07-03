@@ -61,17 +61,32 @@
   }
 
   .nav-logo {
-    font-family: var(--serif);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--gold2);
+    font-family: 'Monotype Corsiva', cursive;
+    font-size: 1.7rem;
+    font-weight: 400;
+    background: linear-gradient(90deg, #e8c97a 0%, #c9a84c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-decoration: none;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-logo span {
+    -webkit-text-fill-color: var(--gold);
     color: var(--gold);
-    font-style: italic;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    font-style: normal;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: var(--sans);
   }
 
   .nav-links {
@@ -1280,7 +1295,7 @@
 
     /* ── NAV MOBILE ── */
     nav { padding: 0.9rem 5%; }
-    .nav-logo { font-size: 1.1rem; }
+    .nav-logo { font-size: 1.25rem; }
 
     /* ── HERO MOBILE ── */
     #hero { padding: 5rem 5% 3rem; }
@@ -1321,8 +1336,7 @@
 <!-- NAV -->
 <nav>
   <div style="display:flex;flex-direction:column;gap:0.1rem;">
-    <span style="font-family: 'Monotype Corsiva', cursive; font-size: 1.55rem; letter-spacing: 0.03em; line-height: 1;"><span style="color: #e8c97a;">Birth</span> <span style="color: #c9a84c;">Blueprint</span></span>
-    <a href="#" class="nav-logo">Destiny <span>Decoded Globally!</span></a>
+    <a href="#" class="nav-logo">Birth Blueprint<span>Destiny Decoded Globally!</span></a>
   </div>
   <ul class="nav-links">
     <li><a href="#">Home</a></li>
@@ -1495,7 +1509,7 @@
         <p class="problem-text">A constant feeling of unrest without a clear reason</p>
       </div>
       <div class="problem-card" style="border-color: rgba(201,168,76,0.3); background: rgba(201,168,76,0.07); grid-column: span 2; text-align: center;">
-        <p class="problem-text" style="font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--gold3);">Don't see your concern here? Let's talk.</p>
+        <p class="problem-text" style="font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--gold3);">Every question has its own path to understanding. Share your query with us — we will explore the cosmic influences behind it.</p>
       </div>
     </div>
   </div>
@@ -1668,11 +1682,11 @@
           <p>This search for greater precision led him to the Krishnamurti Paddhati (KP System), a methodology known for its structured and analytical approach. Rather than relying on broad interpretations, he embraced a discipline that demanded careful study, continuous learning, and a commitment to accuracy.</p>
           <p style="font-family: var(--serif); font-size: 0.95rem; color: var(--gold3); font-style: italic;">Today, every consultation reflects that same philosophy.</p>
           <p>Before every appointment, dedicated time is spent analysing the birth chart, understanding the questions being asked, and preparing a personalised report. This preparation ensures that the consultation itself becomes a meaningful conversation rather than an on-the-spot interpretation.</p>
-          <p>Over the years, he has guided more than 18,000 individuals and families across 12 countries, helping them navigate important decisions related to career, relationships, marriage, health, education, business, family, and personal growth.</p>
+          <p>Over the years, he has guided more than 18,000 individuals and families globally, helping them navigate important decisions related to career, relationships, marriage, health, education, business, family, and personal growth.</p>
           <p>Yet despite decades of experience, one belief has remained unchanged.</p>
           <p style="font-family: var(--serif); font-size: 1rem; color: var(--gold2); border-left: 2px solid var(--gold); padding-left: 1.2rem;">Astrology should never replace human judgment.<br>It should strengthen it.</p>
           <p>Its purpose is not to tell people what to do. Its purpose is to help them understand the possibilities before them, so they can move forward with greater clarity, confidence, and responsibility.</p>
-          <p>For Vatsyayana Sharma, every horoscope represents more than a chart.</p>
+          <p>For him, every horoscope represents more than a chart.</p>
           <p style="font-family: var(--serif); font-size: 0.95rem; color: var(--gold3); font-style: italic;">It represents a person, a family, a story, and a life that deserves to be understood with care, respect, and sincerity.</p>
           <p>That belief continues to guide every consultation at Birth Blueprint.</p>
         </div>
@@ -1753,181 +1767,74 @@
       <p class="section-sub" style="margin: 0 auto 3rem;">Pick a day on the calendar, then share your details to confirm. Sessions available online worldwide via Zoom, Google Meet, or WhatsApp Video.</p>
     </div>
 
-    <!-- Booking Widget -->
-    <div class="fade-up" id="booking-widget" style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.15); border-radius: 12px; padding: 2.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-bottom: 2rem;">
-
-      <!-- Calendar column -->
-      <div>
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.2rem;">
-          <button id="cal-prev" type="button" aria-label="Previous month" style="background:none; border:1px solid rgba(201,168,76,0.3); color:var(--gold2); width:32px; height:32px; border-radius:6px; cursor:pointer;">‹</button>
-          <p id="cal-month-label" style="font-family:var(--serif); font-size:1.1rem; color:var(--gold3); letter-spacing:0.03em;"></p>
-          <button id="cal-next" type="button" aria-label="Next month" style="background:none; border:1px solid rgba(201,168,76,0.3); color:var(--gold2); width:32px; height:32px; border-radius:6px; cursor:pointer;">›</button>
-        </div>
-        <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:4px; text-align:center; font-size:0.7rem; letter-spacing:0.05em; color:var(--muted); margin-bottom:0.4rem;">
-          <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
-        </div>
-        <div id="cal-grid" style="display:grid; grid-template-columns:repeat(7,1fr); gap:4px;"></div>
-        <p style="font-size:0.75rem; color:var(--muted); margin-top:1rem;">Available Mon–Sat, excluding past dates. Sundays are off.</p>
-        <p style="font-size:0.75rem; color:var(--muted); margin-top:0.6rem;">Prefer instant chat? <a href="https://wa.me/919672222171" style="color:var(--gold); text-decoration:none;">WhatsApp directly</a>.</p>
-      </div>
-
-      <!-- Form column -->
-      <div>
-        <p style="font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Selected Date</p>
-        <p id="cal-selected-date" style="font-family:var(--serif); font-size:1.15rem; color:var(--gold3); margin-bottom:1.2rem;">No date selected yet</p>
-
-        <p style="font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:0.6rem;">Available Time Slots</p>
-        <div id="cal-timeslots" style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.5rem; margin-bottom:1.5rem;"></div>
-
-        <form id="booking-form" style="display:flex; flex-direction:column; gap:0.75rem;">
-          <input required type="text" id="bk-name" placeholder="Your full name" style="background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.2); border-radius:6px; padding:0.7rem 0.9rem; color:var(--text); font-family:var(--sans); font-size:0.85rem;">
-          <input required type="email" id="bk-email" placeholder="Email address" style="background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.2); border-radius:6px; padding:0.7rem 0.9rem; color:var(--text); font-family:var(--sans); font-size:0.85rem;">
-          <input required type="tel" id="bk-phone" placeholder="Phone / WhatsApp number" style="background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.2); border-radius:6px; padding:0.7rem 0.9rem; color:var(--text); font-family:var(--sans); font-size:0.85rem;">
-          <select id="bk-session" style="background:rgba(20,24,48,0.95); border:1px solid rgba(201,168,76,0.2); border-radius:6px; padding:0.7rem 0.9rem; color:var(--text); font-family:var(--sans); font-size:0.85rem;">
-            <option value="Quick Query (30 min)">Quick Query — 30 min</option>
-            <option value="Full Consultation (60 min)">Full Consultation — 60 min</option>
-            <option value="Vastu + Chart (60 min)">Vastu + Chart — 60 min</option>
-          </select>
-          <textarea id="bk-message" rows="3" placeholder="Briefly describe your query (optional)" style="background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.2); border-radius:6px; padding:0.7rem 0.9rem; color:var(--text); font-family:var(--sans); font-size:0.85rem; resize:vertical;"></textarea>
-          <button type="submit" class="btn-primary" style="border:none; margin-top:0.3rem;">Confirm Booking → WhatsApp &amp; Email</button>
-        </form>
-        <p id="booking-confirmation" style="display:none; font-size:0.85rem; color:#a8e6c6; margin-top:1rem;"></p>
-      </div>
+    <!-- Cal.com Booking Embed -->
+    <div class="fade-up" style="margin-bottom: 2rem;">
+      <div id="cal-embed-container" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,168,76,0.15); min-height: 700px;"></div>
+      <p style="font-size:0.75rem; color:var(--muted); margin-top:1rem; text-align:center;">
+        Prefer instant chat? <a href="https://wa.me/919672222171" style="color:var(--gold); text-decoration:none;">WhatsApp directly</a>.
+      </p>
     </div>
 
-    <style>
-      .cal-day { background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.12); border-radius:6px; padding:0.5rem 0; text-align:center; font-size:0.8rem; color:var(--text); cursor:pointer; transition:all 0.2s; }
-      .cal-day:hover { border-color:var(--gold); color:var(--gold2); }
-      .cal-day.cal-disabled { color:var(--muted); opacity:0.3; cursor:not-allowed; pointer-events:none; background:transparent; border-color:transparent; }
-      .cal-day.cal-empty { visibility:hidden; pointer-events:none; }
-      .cal-day.cal-selected { background:var(--gold); color:var(--navy); border-color:var(--gold); font-weight:600; }
-      .cal-slot { background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.18); border-radius:6px; padding:0.5rem 0.3rem; text-align:center; font-size:0.75rem; color:var(--text); cursor:pointer; }
-      .cal-slot:hover { border-color:var(--gold); }
-      .cal-slot.cal-slot-selected { background:var(--gold); color:var(--navy); border-color:var(--gold); font-weight:600; }
-      @media (max-width:720px) { #booking-widget { grid-template-columns:1fr !important; } }
-    </style>
-
-    <script>
-    (function() {
-      var viewDate = new Date(); viewDate.setDate(1);
-      var monthLabel = document.getElementById('cal-month-label');
-      var grid = document.getElementById('cal-grid');
-      var timeslotsEl = document.getElementById('cal-timeslots');
-      var selectedDateEl = document.getElementById('cal-selected-date');
-      var selectedDate = null, selectedSlot = null;
-      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-      var slots = ['10:00 AM','11:30 AM','1:00 PM','3:00 PM','4:30 PM','6:00 PM'];
-
-      function renderCalendar() {
-        monthLabel.textContent = months[viewDate.getMonth()] + ' ' + viewDate.getFullYear();
-        grid.innerHTML = '';
-        var firstDay = new Date(viewDate.getFullYear(), viewDate.getMonth(), 1).getDay();
-        var daysInMonth = new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 0).getDate();
-        var today = new Date(); today.setHours(0,0,0,0);
-        for (var i = 0; i < firstDay; i++) {
-          var empty = document.createElement('div');
-          empty.className = 'cal-day cal-empty';
-          grid.appendChild(empty);
+    <!-- Cal.com embed script -->
+    <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
         }
-        for (var d = 1; d <= daysInMonth; d++) {
-          var thisDate = new Date(viewDate.getFullYear(), viewDate.getMonth(), d);
-          var cell = document.createElement('div');
-          cell.className = 'cal-day';
-          cell.textContent = d;
-          if (thisDate < today || thisDate.getDay() === 0) {
-            cell.classList.add('cal-disabled');
-          } else {
-            cell.addEventListener('click', (function(dateObj, el) {
-              return function() {
-                document.querySelectorAll('.cal-day.cal-selected').forEach(function(n){ n.classList.remove('cal-selected'); });
-                el.classList.add('cal-selected');
-                selectedDate = dateObj;
-                selectedDateEl.textContent = dateObj.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-                renderSlots();
-              };
-            })(thisDate, cell));
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            return;
           }
-          grid.appendChild(cell);
+          p(cal, ar);
+          return;
         }
-      }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
 
-      function renderSlots() {
-        timeslotsEl.innerHTML = '';
-        selectedSlot = null;
-        slots.forEach(function(slot) {
-          var el = document.createElement('div');
-          el.className = 'cal-slot';
-          el.textContent = slot;
-          el.addEventListener('click', function() {
-            document.querySelectorAll('.cal-slot-selected').forEach(function(n){ n.classList.remove('cal-slot-selected'); });
-            el.classList.add('cal-slot-selected');
-            selectedSlot = slot;
-          });
-          timeslotsEl.appendChild(el);
-        });
-      }
+    Cal("init", "birth-blueprint", { origin: "https://cal.com" });
 
-      document.getElementById('cal-prev').addEventListener('click', function() { viewDate.setMonth(viewDate.getMonth()-1); renderCalendar(); });
-      document.getElementById('cal-next').addEventListener('click', function() { viewDate.setMonth(viewDate.getMonth()+1); renderCalendar(); });
-      renderCalendar();
-      renderSlots();
+    Cal.ns["birth-blueprint"]("inline", {
+      elementOrSelector: "#cal-embed-container",
+      calLink: "birth-blueprint",
+      layout: "month_view"
+    });
 
-      document.getElementById('booking-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var confirmEl = document.getElementById('booking-confirmation');
-        var name = document.getElementById('bk-name').value.trim();
-        var email = document.getElementById('bk-email').value.trim();
-        var phone = document.getElementById('bk-phone').value.trim();
-        var session = document.getElementById('bk-session').value;
-        var message = document.getElementById('bk-message').value.trim();
-
-        if (!selectedDate) {
-          confirmEl.style.display = 'block'; confirmEl.style.color = '#e8a06a';
-          confirmEl.textContent = 'Please select a date on the calendar first.'; return;
+    Cal.ns["birth-blueprint"]("ui", {
+      theme: "dark",
+      cssVarsPerTheme: {
+        dark: {
+          "cal-bg":             "#0a0f1e",
+          "cal-bg-emphasis":    "#111827",
+          "cal-bg-subtle":      "#1a2540",
+          "cal-bg-muted":       "#141c30",
+          "cal-border":         "rgba(201,168,76,0.2)",
+          "cal-border-emphasis":"rgba(201,168,76,0.4)",
+          "cal-border-subtle":  "rgba(201,168,76,0.12)",
+          "cal-brand":          "#c9a84c",
+          "cal-brand-emphasis": "#e8c97a",
+          "cal-brand-text":     "#0a0f1e",
+          "cal-text":           "#e8e2d6",
+          "cal-text-emphasis":  "#f5e4b3",
+          "cal-text-subtle":    "#8a8070",
+          "cal-text-muted":     "#5a5040"
         }
-        if (!selectedSlot) {
-          confirmEl.style.display = 'block'; confirmEl.style.color = '#e8a06a';
-          confirmEl.textContent = 'Please select a time slot.'; return;
-        }
-
-        var dateStr = selectedDate.toLocaleDateString('en-US', { weekday:'short', year:'numeric', month:'short', day:'numeric' });
-        var waText = '🌟 *New Consultation Booking*\n\n'
-          + '👤 *Name:* ' + name + '\n'
-          + '📧 *Email:* ' + email + '\n'
-          + '📞 *Phone/WhatsApp:* ' + phone + '\n'
-          + '📅 *Date:* ' + dateStr + '\n'
-          + '🕐 *Time:* ' + selectedSlot + '\n'
-          + '📋 *Session:* ' + session + '\n'
-          + (message ? '💬 *Query:* ' + message : '');
-
-        var waUrl = 'https://wa.me/919672222171?text=' + encodeURIComponent(waText);
-        window.open(waUrl, '_blank');
-
-        // Also open email to astrovatsyayana@gmail.com
-        var emailSubject = 'New Consultation Booking – ' + name + ' | ' + dateStr + ' ' + selectedSlot;
-        var emailBody = 'New Consultation Booking\n\n'
-          + 'Name: ' + name + '\n'
-          + 'Email: ' + email + '\n'
-          + 'Phone/WhatsApp: ' + phone + '\n'
-          + 'Date: ' + dateStr + '\n'
-          + 'Time: ' + selectedSlot + '\n'
-          + 'Session: ' + session + '\n'
-          + (message ? 'Query: ' + message + '\n' : '')
-          + '\n— Sent from birthblueprint.com booking form';
-        var mailUrl = 'mailto:astrovatsyayana@gmail.com'
-          + '?subject=' + encodeURIComponent(emailSubject)
-          + '&body=' + encodeURIComponent(emailBody);
-        setTimeout(function() { window.open(mailUrl, '_self'); }, 800);
-
-        confirmEl.style.display = 'block'; confirmEl.style.color = '#a8e6c6';
-        confirmEl.textContent = '✓ WhatsApp and email are opening with your booking details. Please send both to confirm your appointment.';
-        this.reset();
-        document.querySelectorAll('.cal-slot-selected').forEach(function(n){ n.classList.remove('cal-slot-selected'); });
-        document.querySelectorAll('.cal-day.cal-selected').forEach(function(n){ n.classList.remove('cal-selected'); });
-        selectedDate = null; selectedSlot = null;
-        selectedDateEl.textContent = 'No date selected yet';
-      });
-    })();
+      },
+      hideEventTypeDetails: false
+    });
     </script>
 
     <!-- Session Types -->
@@ -1995,7 +1902,7 @@
 
 
 <!-- LEGAL & FAQ SECTION -->
-<section style="padding: 5rem 5%; background: var(--navy3); border-top: 1px solid rgba(201,168,76,0.08);">
+<section id="legal" style="padding: 5rem 5%; background: var(--navy3); border-top: 1px solid rgba(201,168,76,0.08);">
   <div style="max-width: 1000px; margin: 0 auto;">
     <div class="fade-up" style="text-align: center; margin-bottom: 3rem;">
       <p class="section-label">Transparency</p>
@@ -2017,7 +1924,7 @@
         <h3 style="font-family: var(--serif); color: var(--gold2); font-size: 1.2rem; margin-bottom: 1.5rem;">Terms &amp; Conditions</h3>
         <div style="color: var(--muted); font-size: 0.88rem; line-height: 1.8;">
           <p style="margin-bottom: 1rem;"><strong style="color: var(--gold3);">1. Acceptance of Terms</strong><br>By booking a consultation or using this website, you acknowledge that you have read, understood, and agreed to these Terms &amp; Conditions.</p>
-          <p style="margin-bottom: 1rem;"><strong style="color: var(--gold3);">2. Nature of Services</strong><br>Services offered include Astrology, Astro Vastu Consultation, Career Analysis, Marriage &amp; Relationship Guidance, Cosmic Resonance Analysis, and other personalized astrological consultations. These consultations are intended to provide guidance and insights to assist you in making informed decisions — not guarantees of future events.</p>
+          <p style="margin-bottom: 1rem;"><strong style="color: var(--gold3);">2. Nature of Services</strong><br>Services offered include Astrology, Astro Vastu Consultation, Career Analysis, Marriage &amp; Relationship Guidance, Cosmic Resonance Analysis, and other personalized astrological consultations. These services are intended to provide guidance, not guaranteed outcomes. Astrology indicates potential influences and timings, while the results ultimately depend on individual choices, efforts, and karma.</p>
           <p style="margin-bottom: 1rem;"><strong style="color: var(--gold3);">3. Client Responsibilities</strong><br>The client agrees to provide accurate birth details, clearly communicate questions or areas of concern, provide accurate property details for Astro Vastu consultations, and attend the consultation at the scheduled time.</p>
           <p style="margin-bottom: 1rem;"><strong style="color: var(--gold3);">4. Consultation Process</strong><br>Consultations are conducted only after payment confirmation. The analysis normally takes 2–3 working days unless otherwise communicated.</p>
           <p style="margin-bottom: 1rem;"><strong style="color: var(--gold3);">5. Unknown Birth Time</strong><br>If the exact birth time is unavailable, an alternative consultation method may be adopted. The client may be requested to select a number between 1 and 249 and submit specific questions.</p>
@@ -2079,15 +1986,15 @@
       <div style="display: grid; gap: 1rem;">
         <div style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-radius: 8px; padding: 1.4rem 1.8rem;">
           <p style="font-family: var(--serif); color: var(--gold3); font-size: 1rem; margin-bottom: 0.5rem;">Which consultation should I choose?</p>
-          <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.7;">Select the consultation that best matches your concern. If unsure, choose a Comprehensive Chart Analysis.</p>
+          <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.7;">Select the consultation that best matches your concern.</p>
         </div>
         <div style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-radius: 8px; padding: 1.4rem 1.8rem;">
           <p style="font-family: var(--serif); color: var(--gold3); font-size: 1rem; margin-bottom: 0.5rem;">What information is required?</p>
-          <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.7;">Your Date of Birth, Time of Birth, Place of Birth, and your specific questions.</p>
+          <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.7;">Your Date of Birth, Time of Birth, Place of Birth (City, State, District) along with postal code, and your specific question(s).</p>
         </div>
         <div style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-radius: 8px; padding: 1.4rem 1.8rem;">
           <p style="font-family: var(--serif); color: var(--gold3); font-size: 1rem; margin-bottom: 0.5rem;">What if I do not know my birth time?</p>
-          <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.7;">An alternative consultation method may be available. You may be asked to select a number between 1 and 249 and submit your questions.</p>
+          <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.7;">If your birth time is unavailable, simply share your question(s) along with a number between 1 and 249. Your queries will be analysed using the principles of KP Horary (Prashna) Astrology.</p>
         </div>
         <div style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-radius: 8px; padding: 1.4rem 1.8rem;">
           <p style="font-family: var(--serif); color: var(--gold3); font-size: 1rem; margin-bottom: 0.5rem;">How long does the analysis take?</p>
@@ -2103,7 +2010,7 @@
         </div>
         <div style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-radius: 8px; padding: 1.4rem 1.8rem;">
           <p style="font-family: var(--serif); color: var(--gold3); font-size: 1rem; margin-bottom: 0.5rem;">Do remedial measures guarantee results?</p>
-          <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.7;">Remedial measures are recommended as part of traditional astrological practice. Outcomes depend on many factors, including individual circumstances and actions, and cannot be guaranteed.</p>
+          <p style="color: var(--muted); font-size: 0.88rem; line-height: 1.7;">Remedial measures are intended to support positive outcomes by harmonising cosmic influences. However, as results are influenced by karma, free will, and personal effort, no specific outcome can be guaranteed.</p>
         </div>
         <div style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-radius: 8px; padding: 1.4rem 1.8rem;">
           <p style="font-family: var(--serif); color: var(--gold3); font-size: 1rem; margin-bottom: 0.5rem;">Can I reschedule my appointment?</p>
@@ -2139,8 +2046,8 @@ function showTab(name) {
 <footer>
   <div class="footer-grid">
     <div>
-      <p style="font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-family:var(--sans);margin-bottom:0.15rem;">birthblueprint.com</p>
-      <p class="footer-brand-name">Destiny Decoded Globally!</p>
+      <p style="font-family:'Monotype Corsiva',cursive;font-size:1.7rem;font-weight:400;letter-spacing:0.03em;line-height:1.1;background:linear-gradient(90deg,#e8c97a 0%,#c9a84c 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.2rem;">Birth Blueprint</p>
+      <p style="font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-family:var(--sans);margin-bottom:0.75rem;">Destiny Decoded Globally!</p>
       <p style="font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.5rem;">Ancient wisdom applied with scientific precision. Astrology, Vastu, and Cosmic Resonance for those who seek true understanding.</p>
       <p style="font-size:0.78rem; color: var(--muted);">📍 Jaipur, Rajasthan, India</p>
       <p class="footer-flags">
@@ -2166,7 +2073,7 @@ function showTab(name) {
         <span class="flag-dot">·</span>
         <span style="display:inline-flex; align-items:center; gap:0.25rem;"><img src="https://flagcdn.com/w20/bt.png" alt="Bhutan" style="height:13px; border-radius:2px; vertical-align:middle;"> Bhutan</span>
         <span class="flag-dot">·</span>
-        <span style="display:inline-flex; align-items:center; gap:0.25rem;"><img src="https://flagcdn.com/w20/id.png" alt="Bali" style="height:13px; border-radius:2px; vertical-align:middle;"> Bali</span>
+        <span style="display:inline-flex; align-items:center; gap:0.25rem;"><img src="https://flagcdn.com/w20/sg.png" alt="Singapore" style="height:13px; border-radius:2px; vertical-align:middle;"> Singapore</span>
         <span class="flag-dot">·</span>
         <span style="display:inline-flex; align-items:center; gap:0.25rem;"><img src="https://flagcdn.com/w20/ch.png" alt="Switzerland" style="height:13px; border-radius:2px; vertical-align:middle;"> Switzerland</span>
       </p>
@@ -2185,8 +2092,8 @@ function showTab(name) {
       <ul class="footer-links">
         <li><a href="#calendar">Book Consultation</a></li>
         <li><a href="https://wa.me/919672222171">WhatsApp</a></li>
-        <li><a href="mailto:astrovatsyayana@gmail.com">astrovatsyayana@gmail.com</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="mailto:hellobirthblueprint@gmail.com">hellobirthblueprint@gmail.com</a></li>
+        <li><a href="#legal" onclick="setTimeout(function(){showTab('privacy')},100)">Privacy Policy</a></li>
       </ul>
     </div>
 
@@ -2201,6 +2108,9 @@ function showTab(name) {
   <div class="footer-bottom">
     <span>© 2026 birthblueprint.com · Jaipur, Rajasthan, India</span>
     <span>Astrology · Vastu · Cosmic Resonance</span>
+  </div>
+  <div style="text-align:center; padding: 0.75rem 5% 1.25rem; font-size:0.72rem; color:var(--muted); letter-spacing:0.06em;">
+    Designed by Abhinav Saxena, AI leader, USA
   </div>
 </footer>
 
@@ -2220,12 +2130,7 @@ function showTab(name) {
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  document.querySelector('.contact-form button').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.textContent = '✓ Request Sent — We will be in touch shortly';
-    this.style.background = '#1a5c3a';
-    this.style.color = '#a8e6c6';
-  });
+
 </script>
 </body>
 </html>
